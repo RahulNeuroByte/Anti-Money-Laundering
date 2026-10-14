@@ -1,0 +1,60 @@
+{
+  "pyfunc_matches_sklearn_flavor": true,
+  "pyfunc_accepts_datetime_objects": "MlflowException: Failed to enforce schema of data '            Timestamp  Sender_account  ...  Sender_bank_location  Receiver_bank_locati",
+  "tracking_uri": "sqlite:///C:/capstone-project 3/mlflow.db",
+  "run_ids": {
+    "logreg": "a37eee1af7d84474a79a4196ac8ed1e9",
+    "tree": "2c34dae49bf04a47bce9a14c8ed11384",
+    "forest": "e11971f47bcb45618667bc612b1f657c"
+  },
+  "champion_run": "6a6b9b55cd484163bb272d95e9db6a3b",
+  "champion_model": "forest",
+  "registered_version": 2,
+  "alias": "champion",
+  "alias_set": true,
+  "registry_vs_pkl_max_abs_diff_20k_rows": 1.1102230246251565e-16,
+  "comparison": [
+    {
+      "params.model": "forest",
+      "metrics.valid_pr_auc": 0.780785,
+      "metrics.test_pr_auc": 0.797313,
+      "metrics.test_f1": 0.766699,
+      "metrics.repro_abs_diff_vs_phase4": 0.0
+    },
+    {
+      "params.model": "forest",
+      "metrics.valid_pr_auc": 0.780785,
+      "metrics.test_pr_auc": 0.797328,
+      "metrics.test_f1": 0.766699,
+      "metrics.repro_abs_diff_vs_phase4": 1.6e-05
+    },
+    {
+      "params.model": "tree",
+      "metrics.valid_pr_auc": 0.565842,
+      "metrics.test_pr_auc": 0.616767,
+      "metrics.test_f1": 0.740899,
+      "metrics.repro_abs_diff_vs_phase4": 0.0
+    },
+    {
+      "params.model": "tree",
+      "metrics.valid_pr_auc": 0.565842,
+      "metrics.test_pr_auc": 0.616767,
+      "metrics.test_f1": 0.740899,
+      "metrics.repro_abs_diff_vs_phase4": 0.0
+    },
+    {
+      "params.model": "logreg",
+      "metrics.valid_pr_auc": 0.165245,
+      "metrics.test_pr_auc": 0.215533,
+      "metrics.test_f1": 0.261595,
+      "metrics.repro_abs_diff_vs_phase4": 0.0
+    },
+    {
+      "params.model": "logreg",
+      "metrics.valid_pr_auc": 0.165245,
+      "metrics.test_pr_auc": 0.215533,
+      "metrics.test_f1": 0.261595,
+      "metrics.repro_abs_diff_vs_phase4": 0.0
+    }
+  ]
+}

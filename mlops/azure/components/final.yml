@@ -1,0 +1,25 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+name: aml_final
+display_name: AML - Train, evaluate and package
+version: "1"
+description: Fit the tuned models, choose the best on validation, score the test window once, write metrics, PNG charts and the deployable pipeline.
+tags:
+  project: aml-capstone
+  step: final
+code: ../../../build/azure/job_code
+environment: azureml:aml-train-env@latest
+inputs:
+  features:
+    type: uri_folder
+  prepared:
+    type: uri_folder
+  tuning:
+    type: uri_folder
+outputs:
+  model:
+    type: uri_folder
+  evaluation:
+    type: uri_folder
+command: >-
+  python run_step.py final --features ${{inputs.features}} --prepared ${{inputs.prepared}} --tuning ${{inputs.tuning}} --model ${{outputs.model}} --evaluation ${{outputs.evaluation}}

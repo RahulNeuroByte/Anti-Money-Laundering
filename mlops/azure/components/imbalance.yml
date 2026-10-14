@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+name: aml_imbalance
+display_name: AML - Imbalance experiments
+version: "1"
+description: Compare none, class weights, random over/under sampling and SMOTENC for each model on the validation window.
+tags:
+  project: aml-capstone
+  step: imbalance
+code: ../../../build/azure/job_code
+environment: azureml:aml-train-env@latest
+inputs:
+  features:
+    type: uri_folder
+outputs:
+  imbalance:
+    type: uri_folder
+command: >-
+  python run_step.py imbalance --features ${{inputs.features}} --imbalance ${{outputs.imbalance}}

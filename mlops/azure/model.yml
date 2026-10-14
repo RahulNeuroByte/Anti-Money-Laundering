@@ -1,0 +1,11 @@
+$schema: https://azuremlschemas.azureedge.net/latest/model.schema.json
+name: aml-detector-scoring
+version: 1
+type: custom_model
+path: ../../build/azure/model
+description: AML random forest pipeline (feature builder, preprocessing, classifier) with decision threshold
+tags:
+  stage: production
+  algorithm: random_forest
+  dataset: SAML-D
+  threshold_rule: max F1 on validation

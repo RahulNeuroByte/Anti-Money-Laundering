@@ -1,0 +1,34 @@
+{
+  "logreg": {
+    "strategy": "none",
+    "params": {
+      "C": 4.5705630998014515
+    },
+    "cv_average_precision": 0.5803707137878013,
+    "cv_rows": 126018,
+    "seconds": 142
+  },
+  "tree": {
+    "strategy": "random_over",
+    "params": {
+      "min_samples_leaf": 50,
+      "max_depth": 16,
+      "criterion": "entropy"
+    },
+    "cv_average_precision": 0.8618271096972414,
+    "cv_rows": 126018,
+    "seconds": 68
+  },
+  "forest": {
+    "strategy": "random_over",
+    "params": {
+      "n_estimators": 60,
+      "min_samples_leaf": 5,
+      "max_features": 0.3,
+      "max_depth": 20
+    },
+    "cv_average_precision": 0.9254536895759341,
+    "cv_rows": 126018,
+    "seconds": 138
+  }
+}

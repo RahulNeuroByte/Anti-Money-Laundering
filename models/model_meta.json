@@ -1,0 +1,32 @@
+{
+  "model": "forest",
+  "strategy": "random_over",
+  "params": {
+    "n_estimators": 60,
+    "min_samples_leaf": 5,
+    "max_features": 0.3,
+    "max_depth": 20
+  },
+  "threshold": 0.8727341871091869,
+  "threshold_rule": "maximise F1 on the time-ordered validation split",
+  "input_columns": [
+    "Timestamp",
+    "Sender_account",
+    "Receiver_account",
+    "Amount",
+    "Payment_type",
+    "Payment_currency",
+    "Received_currency",
+    "Sender_bank_location",
+    "Receiver_bank_location"
+  ],
+  "window_days": 28,
+  "block_days": 7,
+  "trained_utc": "2026-10-14T04:17:58+00:00",
+  "versions": {
+    "sklearn": "1.9.1",
+    "pandas": "3.0.6",
+    "numpy": "2.5.4",
+    "python": "3.11.9 (sandbox)"
+  }
+}

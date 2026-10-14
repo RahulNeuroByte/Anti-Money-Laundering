@@ -1,0 +1,22 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+name: aml_features
+display_name: AML - Causal feature engineering
+version: "1"
+description: Chronological split and 28-day causal account-profile features for the training pool, validation and test windows.
+tags:
+  project: aml-capstone
+  step: features
+code: ../../../build/azure/job_code
+environment: azureml:aml-train-env@latest
+inputs:
+  prepared:
+    type: uri_folder
+  neg_pool:
+    type: integer
+    default: 200000
+outputs:
+  features:
+    type: uri_folder
+command: >-
+  python run_step.py features --prepared ${{inputs.prepared}} --features ${{outputs.features}} --neg-pool ${{inputs.neg_pool}}

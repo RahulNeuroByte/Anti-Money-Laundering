@@ -1,0 +1,65 @@
+{
+  "shape": [
+    9504852,
+    11
+  ],
+  "memory_mb": 332.7,
+  "dtypes": {
+    "Sender_account": "int64",
+    "Receiver_account": "int64",
+    "Amount": "float32",
+    "Payment_currency": "category",
+    "Received_currency": "category",
+    "Sender_bank_location": "category",
+    "Receiver_bank_location": "category",
+    "Payment_type": "category",
+    "Is_laundering": "int8",
+    "Laundering_type": "category",
+    "Timestamp": "datetime64[us]"
+  },
+  "missing": {
+    "Sender_account": 0,
+    "Receiver_account": 0,
+    "Amount": 0,
+    "Payment_currency": 0,
+    "Received_currency": 0,
+    "Sender_bank_location": 0,
+    "Receiver_bank_location": 0,
+    "Payment_type": 0,
+    "Is_laundering": 0,
+    "Laundering_type": 0,
+    "Timestamp": 0
+  },
+  "duplicate_rows": 0,
+  "amount_summary": {
+    "count": 9504852.0,
+    "mean": 8762.967600852318,
+    "std": 25614.952931742297,
+    "min": 3.7300000190734863,
+    "25%": 2143.6874389648438,
+    "50%": 6113.72021484375,
+    "75%": 10458.46240234375,
+    "max": 12618498.0
+  },
+  "categorical_cardinality": {
+    "Payment_currency": 13,
+    "Received_currency": 13,
+    "Sender_bank_location": 18,
+    "Receiver_bank_location": 18,
+    "Payment_type": 7,
+    "Laundering_type": 28
+  },
+  "target": {
+    "name": "Is_laundering",
+    "positives": 9873,
+    "negatives": 9494979,
+    "positive_rate_percent": 0.1039,
+    "imbalance_ratio_neg_to_pos": 961.7
+  },
+  "unique_senders": 292715,
+  "unique_receivers": 652266,
+  "timestamp_range": [
+    "2022-10-07 10:35:19",
+    "2023-08-23 10:57:12"
+  ]
+}

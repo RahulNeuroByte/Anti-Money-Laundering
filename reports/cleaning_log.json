@@ -1,0 +1,16 @@
+{
+  "rows_in": 9504852,
+  "duplicates_removed": 0,
+  "missing_by_column": {},
+  "rows_removed_missing": 0,
+  "rows_removed_nonpositive_amount": 0,
+  "amount_outliers": {
+    "iqr_upper_fence": 22930.62484741211,
+    "count_above_fence": 429848,
+    "positive_rate_above_fence": 0.0020774785505574063,
+    "positive_rate_below_fence": 0.0009895312442837491,
+    "decision": "retained; log1p transform applied during feature engineering"
+  },
+  "self_transfers": 0,
+  "rows_out": 9504852
+}

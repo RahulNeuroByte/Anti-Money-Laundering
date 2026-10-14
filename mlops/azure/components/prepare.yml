@@ -1,0 +1,19 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+name: aml_prepare
+display_name: AML - Prepare data and EDA
+version: "1"
+description: Profile, clean and explore the raw SAML-D transactions; writes a parquet cache, reports and EDA PNG figures.
+tags:
+  project: aml-capstone
+  step: prepare
+code: ../../../build/azure/job_code
+environment: azureml:aml-train-env@latest
+inputs:
+  raw:
+    type: uri_file
+outputs:
+  prepared:
+    type: uri_folder
+command: >-
+  python run_step.py prepare --raw ${{inputs.raw}} --prepared ${{outputs.prepared}}

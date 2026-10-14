@@ -1,0 +1,15 @@
+name: aml-scoring
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11.9
+  - pip
+  - pip:
+      - scikit-learn==1.9.1
+      - pandas==3.0.6
+      - pyarrow==26.0.0
+      - numpy==2.4.6
+      - joblib==1.6.0
+      - pydantic==2.14.0
+      - pyyaml==6.0.3
+      - azureml-inference-server-http

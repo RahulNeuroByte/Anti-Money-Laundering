@@ -1,0 +1,4 @@
+$schema: https://azuremlschemas.azureedge.net/latest/managedOnlineEndpoint.schema.json
+name: aml-detector-endpoint
+auth_mode: key
+description: AML transaction scoring (capstone)

@@ -1,0 +1,16 @@
+data:
+  raw_path: data/raw/SAML-D.csv
+  processed_dir: data/processed
+  target: Is_laundering
+  leakage_columns: [Laundering_type]   # perfectly separates the classes; never a model feature
+  id_columns: [Sender_account, Receiver_account]
+split:
+  strategy: time          # chronological split on Date + Time
+  train_frac: 0.70
+  valid_frac: 0.15        # remaining 0.15 is the untouched test set
+  random_state: 42
+model:
+  artifact_path: models/aml_pipeline.pkl
+  decision_threshold: null   # chosen on the validation set in Phase 4
+logging:
+  level: INFO

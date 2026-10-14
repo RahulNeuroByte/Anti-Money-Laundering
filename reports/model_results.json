@@ -1,0 +1,315 @@
+{
+  "logreg": {
+    "strategy": "none",
+    "params": {
+      "C": 4.5705630998014515
+    },
+    "valid": {
+      "roc_auc": 0.9153420076704657,
+      "pr_auc": 0.1652450267295367,
+      "at_best_f1": {
+        "threshold": 0.7340832597209117,
+        "accuracy": 0.9985754646047493,
+        "precision": 0.23881856540084387,
+        "recall": 0.20042492917847027,
+        "f1": 0.21794378128609934,
+        "tp": 283,
+        "fp": 902,
+        "fn": 1129,
+        "tn": 1423414,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 1185
+      },
+      "at_recall_0.80": {
+        "threshold": 0.03898636440414805,
+        "accuracy": 0.8875746285406473,
+        "precision": 0.0070127097606990365,
+        "recall": 0.8002832861189801,
+        "f1": 0.013903585402465732,
+        "tp": 1130,
+        "fp": 160006,
+        "fn": 282,
+        "tn": 1264310,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 161136
+      }
+    },
+    "test": {
+      "roc_auc": 0.9202552340104913,
+      "pr_auc": 0.21553309914109342,
+      "at_best_f1": {
+        "threshold": 0.7340832597209117,
+        "accuracy": 0.9984478105220631,
+        "precision": 0.30153846153846153,
+        "recall": 0.2309958750736594,
+        "f1": 0.261594928261595,
+        "tp": 392,
+        "fp": 908,
+        "fn": 1305,
+        "tn": 1423123,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 1300
+      },
+      "at_recall_0.80": {
+        "threshold": 0.03898636440414805,
+        "accuracy": 0.8831642501234457,
+        "precision": 0.00817329777650505,
+        "recall": 0.807307012374779,
+        "f1": 0.01618275886508068,
+        "tp": 1370,
+        "fp": 166249,
+        "fn": 327,
+        "tn": 1257782,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 167619
+      }
+    }
+  },
+  "tree": {
+    "strategy": "random_over",
+    "params": {
+      "min_samples_leaf": 50,
+      "max_depth": 16,
+      "criterion": "entropy"
+    },
+    "valid": {
+      "roc_auc": 0.9550087210192486,
+      "pr_auc": 0.5658420601560864,
+      "at_best_f1": {
+        "threshold": 0.9803921568627451,
+        "accuracy": 0.9994227510436773,
+        "precision": 0.7069571328179901,
+        "recall": 0.7124645892351275,
+        "f1": 0.709700176366843,
+        "tp": 1006,
+        "fp": 417,
+        "fn": 406,
+        "tn": 1423899,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 1423
+      },
+      "at_recall_0.80": {
+        "threshold": 0.7647058823529411,
+        "accuracy": 0.9978649503972707,
+        "precision": 0.2903391572456321,
+        "recall": 0.8002832861189801,
+        "f1": 0.42609351432880843,
+        "tp": 1130,
+        "fp": 2762,
+        "fn": 282,
+        "tn": 1421554,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 3892
+      }
+    },
+    "test": {
+      "roc_auc": 0.9555581460064245,
+      "pr_auc": 0.6167668557418111,
+      "at_best_f1": {
+        "threshold": 0.9803921568627451,
+        "accuracy": 0.9994059175382681,
+        "precision": 0.7703562340966921,
+        "recall": 0.7136122569239834,
+        "f1": 0.740899357601713,
+        "tp": 1211,
+        "fp": 361,
+        "fn": 486,
+        "tn": 1423670,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 1572
+      },
+      "at_recall_0.80": {
+        "threshold": 0.7647058823529411,
+        "accuracy": 0.9978453113076267,
+        "precision": 0.3326028731434137,
+        "recall": 0.8049499116087213,
+        "f1": 0.4707098552722261,
+        "tp": 1366,
+        "fp": 2741,
+        "fn": 331,
+        "tn": 1421290,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 4107
+      }
+    }
+  },
+  "forest": {
+    "strategy": "random_over",
+    "params": {
+      "n_estimators": 60,
+      "min_samples_leaf": 5,
+      "max_features": 0.3,
+      "max_depth": 20
+    },
+    "valid": {
+      "roc_auc": 0.9856024438273785,
+      "pr_auc": 0.7807848854100138,
+      "at_best_f1": {
+        "threshold": 0.8727341871091869,
+        "accuracy": 0.999576356780536,
+        "precision": 0.8181102362204724,
+        "recall": 0.7358356940509915,
+        "f1": 0.7747949291573453,
+        "tp": 1039,
+        "fp": 231,
+        "fn": 373,
+        "tn": 1424085,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 1270
+      },
+      "at_recall_0.80": {
+        "threshold": 0.745564598549312,
+        "accuracy": 0.9993280625757508,
+        "precision": 0.6256921373200443,
+        "recall": 0.8002832861189801,
+        "f1": 0.702299564947172,
+        "tp": 1130,
+        "fp": 676,
+        "fn": 282,
+        "tn": 1423640,
+        "support_pos": 1412,
+        "support_neg": 1424316,
+        "alerts": 1806
+      }
+    },
+    "test": {
+      "roc_auc": 0.982826927692878,
+      "pr_auc": 0.7973129065639248,
+      "at_best_f1": {
+        "threshold": 0.8727341871091869,
+        "accuracy": 0.9994928906495488,
+        "precision": 0.8473609129814551,
+        "recall": 0.7000589275191514,
+        "f1": 0.7666989351403679,
+        "tp": 1188,
+        "fp": 214,
+        "fn": 509,
+        "tn": 1423817,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 1402
+      },
+      "at_recall_0.80": {
+        "threshold": 0.745564598549312,
+        "accuracy": 0.9993420904969251,
+        "precision": 0.7008999470619375,
+        "recall": 0.7802003535651149,
+        "f1": 0.7384272169548243,
+        "tp": 1324,
+        "fp": 565,
+        "fn": 373,
+        "tn": 1423466,
+        "support_pos": 1697,
+        "support_neg": 1424031,
+        "alerts": 1889
+      }
+    }
+  },
+  "selected": "forest",
+  "feature_importance_selected": {
+    "s_in_count": 0.08249207255518819,
+    "s_out_nuniq": 0.0809508590375845,
+    "sender_flow_ratio": 0.07763541402845298,
+    "s_in_total": 0.07254429607592015,
+    "r_in_nuniq": 0.06703790550342174,
+    "s_out_count": 0.05317292955823398,
+    "log_amount": 0.050088238164489415,
+    "s_in_nuniq": 0.04906106226746294,
+    "s_out_max": 0.04383698041873334,
+    "r_in_count": 0.040047384382370904,
+    "r_in_total": 0.03483666829906473,
+    "amount_to_sender_mean": 0.03463887665656425,
+    "s_out_total": 0.030444507473222606,
+    "s_out_mean": 0.02985256985447331,
+    "r_out_total": 0.029791954708014903
+  },
+  "error_analysis": {
+    "recall_by_typology_test": {
+      "Bipartite": {
+        "n": 26,
+        "recall": 0.5
+      },
+      "Fan_In": {
+        "n": 36,
+        "recall": 0.556
+      },
+      "Cycle": {
+        "n": 49,
+        "recall": 0.571
+      },
+      "Over-Invoicing": {
+        "n": 7,
+        "recall": 0.571
+      },
+      "Gather-Scatter": {
+        "n": 82,
+        "recall": 0.598
+      },
+      "Single_large": {
+        "n": 34,
+        "recall": 0.647
+      },
+      "Layered_Fan_In": {
+        "n": 88,
+        "recall": 0.648
+      },
+      "Stacked Bipartite": {
+        "n": 128,
+        "recall": 0.664
+      },
+      "Smurfing": {
+        "n": 152,
+        "recall": 0.664
+      },
+      "Fan_Out": {
+        "n": 58,
+        "recall": 0.672
+      },
+      "Deposit-Send": {
+        "n": 163,
+        "recall": 0.687
+      },
+      "Structuring": {
+        "n": 363,
+        "recall": 0.713
+      },
+      "Scatter-Gather": {
+        "n": 46,
+        "recall": 0.739
+      },
+      "Layered_Fan_Out": {
+        "n": 100,
+        "recall": 0.75
+      },
+      "Cash_Withdrawal": {
+        "n": 241,
+        "recall": 0.763
+      },
+      "Behavioural_Change_1": {
+        "n": 62,
+        "recall": 0.839
+      },
+      "Behavioural_Change_2": {
+        "n": 62,
+        "recall": 0.871
+      }
+    },
+    "false_positives_by_payment_type": {
+      "Cheque": 53,
+      "ACH": 52,
+      "Credit card": 50,
+      "Debit card": 34,
+      "Cross-border": 22,
+      "Cash Deposit": 3
+    }
+  }
+}

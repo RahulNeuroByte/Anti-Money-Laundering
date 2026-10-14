@@ -1,0 +1,24 @@
+{
+  "reload_max_abs_diff_20k_rows": 1.1102230246251565e-16,
+  "reload_exact_match": false,
+  "raw_test_scoring_seconds": 17.3,
+  "static_profile_end": "2023-07-05 15:24:39",
+  "test_with_static_profile": {
+    "roc_auc": 0.9827639411740094,
+    "pr_auc": 0.7644549145058589,
+    "at_saved_threshold": {
+      "threshold": 0.8727341871091869,
+      "accuracy": 0.999428362212147,
+      "precision": 0.8083916083916084,
+      "recall": 0.6812021213906895,
+      "f1": 0.7393668052446434,
+      "tp": 1156,
+      "fp": 274,
+      "fn": 541,
+      "tn": 1423757,
+      "support_pos": 1697,
+      "support_neg": 1424031,
+      "alerts": 1430
+    }
+  }
+}

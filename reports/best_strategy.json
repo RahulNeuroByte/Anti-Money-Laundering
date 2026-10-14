@@ -1,0 +1,5 @@
+{
+  "forest": "random_over",
+  "tree": "random_over",
+  "logreg": "none"
+}

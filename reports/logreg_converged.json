@@ -1,0 +1,22 @@
+[
+  {
+    "strategy": "none",
+    "roc_auc": 0.9145949083441371,
+    "pr_auc": 0.1649141702817365
+  },
+  {
+    "strategy": "class_weight",
+    "roc_auc": 0.9247173238850687,
+    "pr_auc": 0.11733613248258647
+  },
+  {
+    "strategy": "random_over",
+    "roc_auc": 0.9211899560802654,
+    "pr_auc": 0.15441547994236
+  },
+  {
+    "strategy": "random_under",
+    "roc_auc": 0.9210924315089164,
+    "pr_auc": 0.15003115264910422
+  }
+]

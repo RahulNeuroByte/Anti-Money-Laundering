@@ -1,0 +1,24 @@
+$schema: https://azuremlschemas.azureedge.net/latest/commandComponent.schema.json
+type: command
+name: aml_tune
+display_name: AML - Hyper-parameter tuning
+version: "1"
+description: Randomised search with stratified CV (average precision) for the three models using the best imbalance strategy.
+tags:
+  project: aml-capstone
+  step: tune
+code: ../../../build/azure/job_code
+environment: azureml:aml-train-env@latest
+inputs:
+  features:
+    type: uri_folder
+  imbalance:
+    type: uri_folder
+  cv_neg:
+    type: integer
+    default: 120000
+outputs:
+  tuning:
+    type: uri_folder
+command: >-
+  python run_step.py tune --features ${{inputs.features}} --imbalance ${{inputs.imbalance}} --tuning ${{outputs.tuning}} --cv-neg ${{inputs.cv_neg}}
