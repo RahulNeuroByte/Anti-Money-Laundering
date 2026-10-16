@@ -1,0 +1,3 @@
+Trigger CI to pick up updated requirements.txt
+
+This file was added to force GitHub Actions to run on the latest commit after pinning requirements to match the Azure job_conda.yml.
