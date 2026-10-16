@@ -13,11 +13,22 @@ AZ = ROOT / "mlops" / "azure"
 def _pins(path: Path) -> dict[str, str]:
     out = {}
     for line in path.read_text().splitlines():
-        # Allowing flexible leading whitespace characters before the optional dash marker
-        m = re.match(r"^\s*(?:-\s+)?([A-Za-z0-9_.-]+)==([^\s#]+)", line)
-        if m:
-            out[m.group(1).lower().replace("_", "-")] = m.group(2)
+        # Remove comment markers completely
+        line = line.split('#')[0].strip()
+        
+        # Check if the line contains a valid version pin using '=='
+        if "==" in line:
+            # Clean up structural characters from yml dashes/lists
+            clean_line = line.lstrip('- ').strip()
+            
+            # Split the line into package name and version string
+            parts = clean_line.split("==")
+            if len(parts) == 2:
+                pkg, version = parts[0].strip(), parts[1].strip()
+                # Normalize underscores to hyphens to ensure uniform matching
+                out[pkg.lower().replace("_", "-")] = version
     return out
+
 
 
 
