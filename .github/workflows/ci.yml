@@ -14,4 +14,15 @@ jobs:
       - run: pip install -r requirements.txt
       - run: pip check
       - run: ruff check .
+      
+      # --- TEMPORARY DEBUG STEP ADDED HERE ---
+      - name: Print raw files for debugging
+        run: |
+          echo "=== CONTENT OF REQUIREMENTS.TXT ==="
+          cat requirements.txt
+          echo "==================================="
+          echo "=== CONTENT OF JOB_CONDA.YML ==="
+          cat mlops/azure/environment/job_conda.yml
+          echo "==================================="
+
       - run: pytest -q
