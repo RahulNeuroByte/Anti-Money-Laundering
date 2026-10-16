@@ -1,3 +1,5 @@
 Trigger CI to pick up updated requirements.txt
 
-This file was added to force GitHub Actions to run on the latest commit after pinning requirements to match the Azure job_conda.yml.
+This file was updated to force GitHub Actions to run on the latest commit after pinning requirements to match the Azure job_conda.yml.
+
+Updated at 2026-10-16T05:20:00Z to retrigger CI.
