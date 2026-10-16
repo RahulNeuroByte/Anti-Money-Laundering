@@ -11,7 +11,6 @@ AZ = ROOT / "mlops" / "azure"
 
 
 def _pins(path: Path) -> dict[str, str]:
-    import re
     out = {}
     for line in path.read_text().splitlines():
         # Remove any comments from the line
