@@ -11,25 +11,30 @@ AZ = ROOT / "mlops" / "azure"
 
 
 def _pins(path: Path) -> dict[str, str]:
+    import re
     out = {}
     for line in path.read_text().splitlines():
-        # Remove comment markers completely
+        # Remove any comments from the line
         line = line.split('#')[0].strip()
-        
-        # Check if the line contains a valid version pin using '=='
-        if "==" in line:
-            # Clean up structural characters from yml dashes/lists
-            clean_line = line.lstrip('- ').strip()
+        if not line:
+            continue
             
-            # Split the line into package name and version string
-            parts = clean_line.split("==")
-            if len(parts) == 2:
-                pkg, version = parts[0].strip(), parts[1].strip()
-                # Normalize underscores to hyphens to ensure uniform matching
-                out[pkg.lower().replace("_", "-")] = version
+        # Clean up any YAML dashes or list spacing
+        clean_line = line.lstrip('- ').strip()
+        
+        # Split on any common package operator (==, >=, <=)
+        parts = re.split(r'==|>=|<=', clean_line)
+        if parts and parts[0]:
+            pkg_name = parts[0].strip().lower().replace("_", "-")
+            
+            # Ignore internal python settings
+            if pkg_name in ('python', 'pip'):
+                continue
+                
+            # Save the version if it exists, otherwise default to "any"
+            version = parts[1].strip() if len(parts) > 1 else "any"
+            out[pkg_name] = version
     return out
-
-
 
 
 def test_job_code_snapshot_is_self_contained(tmp_path):
