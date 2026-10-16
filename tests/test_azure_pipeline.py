@@ -13,10 +13,12 @@ AZ = ROOT / "mlops" / "azure"
 def _pins(path: Path) -> dict[str, str]:
     out = {}
     for line in path.read_text().splitlines():
-        m = re.match(r"^\s*(?:- )?([A-Za-z0-9_.-]+)==([^\s#]+)", line)
+        # Allowing flexible leading whitespace characters before the optional dash marker
+        m = re.match(r"^\s*(?:-\s+)?([A-Za-z0-9_.-]+)==([^\s#]+)", line)
         if m:
             out[m.group(1).lower().replace("_", "-")] = m.group(2)
     return out
+
 
 
 def test_job_code_snapshot_is_self_contained(tmp_path):
